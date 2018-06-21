@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="./node_modules/vue/dist/vue.min.js"></script>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>{{title}}</h2>
+        <h5 v-if="loading">Loading...</h5>
+        <story v-for="story in topStories" :key="story.id" :story="story"></story>
+    </div>
+    <script src="apihelpers.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
